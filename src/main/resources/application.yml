@@ -1,0 +1,14 @@
+spring.cloud.stream:
+ instanceCount: 1
+ bindings:
+  input:
+    destination: raw
+    group: t13
+    consumer:
+      configuration:
+        max:
+          poll:
+            records: 100
+      concurrency: 6
+  output:
+    destination: valid
