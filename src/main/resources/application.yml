@@ -3,7 +3,7 @@ spring.cloud.stream:
  bindings:
   input:
     destination: raw
-    group: t13
+    group: t1
     consumer:
       configuration:
         max:
