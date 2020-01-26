@@ -7,7 +7,6 @@ import org.springframework.messaging.handler.annotation.SendTo;
 
 /**
  * This is a placeholder job for validation. This demos a job where the input and output are bound at compile time.
- *
  */
 @EnableBinding(Validation.class)
 public class StreamingValidator extends BaseStreaming {
@@ -16,8 +15,6 @@ public class StreamingValidator extends BaseStreaming {
     @SendTo(Validation.OUTPUT_CHANNEL)
     public String process(String s) {
         /* Assume everything is valid for now :)
-           Thd dedupe validator demos how you can conditionally send messages to different destinations
-           and the same approach can be used for validation errors in real
          */
         return s;
     }

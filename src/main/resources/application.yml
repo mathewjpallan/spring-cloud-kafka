@@ -12,16 +12,3 @@ spring.cloud.stream:
        concurrency: 6
    validationoutput:
      destination: valid
-   dedupeinput:
-     destination: valid
-     group: t2
-     consumer:
-       configuration:
-         max:
-           poll:
-             records: 100
-       concurrency: 6
-   uniqueoutput:
-     destination: unique
-   duplicateoutput:
-     destination: duplicate
