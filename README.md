@@ -23,7 +23,7 @@ Trying spring cloud stream with kafka binder
 bin/kafka-console-producer.sh --broker-list localhost:9092 --topic raw
 Add the following json as input {"name": "user1", "address" : {"line1":"xzy", "line2":"jenga", "pin":"560068"}}
 ```
-4. Use a console consumer on the valid topic to see the messages that have been processed by the validator streaming consumer.
+4. Use a console consumer on the valid topic to see the messages that have been processed by the streaming consumer.
 ```
 bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic valid --from-beginning
 ```
