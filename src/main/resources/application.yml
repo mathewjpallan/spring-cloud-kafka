@@ -1,14 +1,27 @@
 spring.cloud.stream:
  instanceCount: 1
  bindings:
-  input:
-    destination: raw
-    group: t1
-    consumer:
-      configuration:
-        max:
-          poll:
-            records: 100
-      concurrency: 6
-  output:
-    destination: valid
+   validationinput:
+     destination: raw
+     group: t1
+     consumer:
+       configuration:
+         max:
+           poll:
+             records: 100
+       concurrency: 6
+   validationoutput:
+     destination: valid
+   dedupeinput:
+     destination: valid
+     group: t2
+     consumer:
+       configuration:
+         max:
+           poll:
+             records: 100
+       concurrency: 6
+   uniqueoutput:
+     destination: unique
+   duplicateoutput:
+     destination: duplicate
